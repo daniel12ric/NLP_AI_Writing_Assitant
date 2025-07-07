@@ -16,7 +16,7 @@ import textstat
 # nltk.download('omw-1.4')
 
 # Inisialisasi grammar checker
-tool = language_tool_python.LanguageTool('en-US')
+tool = language_tool_python.LanguageTool('en-US', remote_server='https://api.languagetoolplus.com')
 
 # Daftar kata umum dan saran akademik
 common_words = {
