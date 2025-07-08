@@ -316,13 +316,13 @@ style_patterns = {
 }
 
 # Fungsi sinonim
-def get_synonyms(word):
-    synonyms = set()
-    for syn in wordnet.synsets(word):
-        for lemma in syn.lemmas():
-            if lemma.name().lower() != word.lower():
-                synonyms.add(lemma.name().replace('_', ' '))
-    return list(synonyms)
+# def get_synonyms(word):
+#     synonyms = set()
+#     for syn in wordnet.synsets(word):
+#         for lemma in syn.lemmas():
+#             if lemma.name().lower() != word.lower():
+#                 synonyms.add(lemma.name().replace('_', ' '))
+#     return list(synonyms)
 
 # Fungsi grammar
 def check_grammar(text):
@@ -432,12 +432,12 @@ if st.button("🔍 Cek Teks"):
                     if issue['suggestion']:
                         st.markdown(f"  🔁 Saran: `{issue['suggestion'][0]}`")
 
-        if "Sinonim" in options:
-            st.subheader("🔤 Vocabulary Enhancement (Sinonim Kata)")
-            for word in user_text.split():
-                syns = get_synonyms(word)
-                if syns:
-                    st.markdown(f"- **{word}** → 🔁 Contoh sinonim: {', '.join(syns[:3])}")
+        # if "Sinonim" in options:
+        #     st.subheader("🔤 Vocabulary Enhancement (Sinonim Kata)")
+        #     for word in user_text.split():
+        #         syns = get_synonyms(word)
+        #         if syns:
+        #             st.markdown(f"- **{word}** → 🔁 Contoh sinonim: {', '.join(syns[:3])}")
 
         if "Vocabulary" in options:
             st.subheader("🧠 Vocabulary Improvement")
