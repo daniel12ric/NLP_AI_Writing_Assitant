@@ -406,8 +406,8 @@ st.write("Pilih aspek yang ingin kamu evaluasi dari tulisanmu:")
 
 options = st.multiselect(
     "✅ Pilih satu atau lebih:",
-    ["Grammar", "Sinonim", "Vocabulary", "Style", "Readability"],
-    default=["Grammar", "Sinonim", "Vocabulary", "Style", "Readability"]
+    ["Grammar", "Vocabulary", "Style", "Readability"],
+    default=["Grammar", "Vocabulary", "Style", "Readability"]
 )
 
 user_text = st.text_area("✍️ Tulis teks kamu di sini:", height=150)
